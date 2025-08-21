@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Welcome to {{ title }}!</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/calculator">Calculator</a>
+            <a href="/tictactoe">Tictactoe</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section>
+            <h2>Hello, {{ name }}!</h2>
+            <p>Here’s a little about me:</p>
+            <ul>
+                <li>I like to play football ⚽</li>
+                <li>I enjoy playing video games 🎮</li>
+                <li>I also like to play basketball 🏀</li>
+            </ul>
+        </section>
+
+        <section>
+            <h1>This is my Father and mother's photo</h1>
+            <img src="{{ url_for('static', filename='babamami.png') }}" alt="My Father and mother" width="400">
+            <h1>This is me and my brother</h1>
+            <img src="{{ url_for('static', filename='arpan.jpg') }}" alt="Me and brother" width="400">
+            <h1>This is my family</h1>
+            <img src="{{ url_for('static', filename='family.png') }}" alt="My family" width="400">
+        </section>
+
+        <section>
+            <button onclick="greet()">greet!</button>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>2025 My personal Website</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        function greet() {
+            alert("Hello! Welcome to my hobbies page!");
+        }
+    </script>
+</body>
+</html>
